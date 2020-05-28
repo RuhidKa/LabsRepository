@@ -31,7 +31,7 @@ int getxy(char a[20], char f1, char f2, int mode)
     return 0;
 }
 
-int chessmovement(int y1, int x1, int y2, int x2, char mas[10][10])
+int correct_move(int y1, int x1, int y2, int x2, char mas[10][10])
 {
     if (mas[y1][x1] == 'p') {
         if (mas[y2][x2] == ' ' && x1 == x2 && abs(y2 - y1) <= 2) {
@@ -272,7 +272,7 @@ void chess(char mas[10][10])
         end = getxy(str, '#', ' ', 2);
         y_1 = (y_1 - 8) * (-1);
         y_2 = (y_2 - 8) * (-1);
-        chessmovement(y_1, x_1, y_2, x_2, mas);
+        correct_move(y_1, x_1, y_2, x_2, mas);
         for (int i = k - 7; i < k; ++i)
             if (str[i] != '\n')
                 printf("%c", str[i]);
