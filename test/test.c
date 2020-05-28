@@ -9,15 +9,16 @@ CTEST(coords, incorrect_mode)
     ASSERT_FALSE(chessmovement(-2, 1, 4, 1, mas));
 }
 
+CTEST(coords, incorrect_paws)
+{
+    ASSERT_FALSE(chessmovement(2, 4, 5, 4, mas));
+}
+
 CTEST(coords, correct_paws)
 {
     ASSERT_TRUE(chessmovement(7, 1, 6, 1, mas));
 }
 
-CTEST(coords, incorrect_paws)
-{
-    ASSERT_FALSE(chessmovement(2, 4, 5, 4, mas));
-}
 
 CTEST(coords, incorrect_rook)
 {
