@@ -1,6 +1,6 @@
 #include "board.h"
-#include <locale.h>
 #include "board_print.h"
+#include <locale.h>
 
 int getxy(char a[20], char f1, char f2, int mode)
 {
